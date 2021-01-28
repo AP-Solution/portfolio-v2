@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: Roboto;
+}
+
+header {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(to top, #063365, #29b593, #4ecad2, #13a0f0, #6d4bf6, #731cb7, #003f86);
+	background: url('background.jpg') 50% 100% no-repeat;
+}
+header nav {
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	min-height: 60px;
+	background-color: rgba(128, 128, 128, 0.5);
+	display: flex;
+}
+header nav ul {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	align-items: center;
+}
+
+/* MENU HAMBURGER ICON */
+
+header nav ul .icon_hamburger {
+	cursor: pointer;
+	display: block;
+	position: relative;
+	width: 40px;
+	height: 30px;
+	margin: 0 auto 0 15px;
+
+}
+header nav ul .icon_hamburger:before,
+header nav ul .icon_hamburger:after {
+	transform-origin: 0 0;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	transition: 0.3s;
+}
+header nav ul .icon_hamburger:before {
+	top: 0;
+}
+header nav ul .icon_hamburger:after {
+	bottom: 0;
+}
+header nav ul .icon_hamburger span {
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	top: 13.5px;
+}
+header nav ul .icon_hamburger.active span {
+	display: none;
+}
+header nav ul .icon_hamburger.active:before {
+	transform: rotate(45deg);
+}
+header nav ul .icon_hamburger.active:after {
+	transform: rotate(-45deg);
+}
+
+/* SIDEBAR */
+
+aside.sidebar {
+	width: 50%;
+	height: calc(100vh - 60px);
+	position: fixed;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.45);
+	right: 100%;
+	transition: 0.5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+aside.sidebar.active {
+	right: 50%;
+}
+aside.sidebar ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: rgba(126,126,126,0.9);
+	padding: 10%;
+	border-radius: 25px;
+	box-shadow: 0 0 10px 1px white;
+}
+aside.sidebar ul li {
+	cursor: pointer;
+	margin: 10px 0;
+	font-size: 24px;
+	color: #fff;
+	text-shadow: 3px 3px 3px black;
+}
+aside.sidebar ul li:hover {
+	color: lightgrey;
+	text-shadow: 0 0 3px white;
+}
+
+/* MENU ITEMS */
+
+.icon {
+	cursor: pointer;
+	margin: 0 8px;
+	font-size: 20px;
+	color: #fff;
+	width: 40px;
+	height: 40px;
+	//border: 2px solid gold;
+	border-radius: 50%;
+}
+.text_logo {
+	font-family: Roboto;
+	margin-right: auto;
+	font-size: 50px;
+	color: rgba(0,0,0, 1);
+	text-shadow: 2px 1px 3px white;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.icon img {
+	max-width: 100%;
+}
+.menu_item:last-child {
+	margin-right: 15px;
+}
+
+/* WELCOME CONTENT */
+
+.welcome {
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: calc(100vh - 60px);
+	background-color: rgba(0,0,0,0.3);
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	padding-left: 60px;
+}
+
+.welcome h1  {
+	margin-top: 100px;
+	font-size: 60px;
+	color: #fff;
+	text-shadow: 3px 3px 3px black;
+	opacity: 0;
+	transition: 1s;
+}
+.welcome h3  {
+	margin-top: 80px;
+	font-size: 40px;
+	color: #fff;
+	text-shadow: 3px 3px 3px black;
+	opacity: 0;
+	transition: 1s;
+}
+
+section.goals {
+	width: 100%;
+	height: 100vh;
+	background-color: grey;
+}
+section.goals h2 {
+	font-size: 60px;
+	color: lightgrey;
+	text-shadow: 3px 3px 3px black;
+	text-align: center;
+}
+section.goals table {
+	width: 80%;
+	margin: 50px auto;
+	border: 2px solid black;
+	border-collapse: collapse;
+	box-shadow: 1px 1px 30px 1px lightgrey;
+}
+section.goals table th,
+section.goals table td {
+	padding: 5px;
+	border: 2px solid black;
+	text-align: center;
+}
